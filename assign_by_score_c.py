@@ -34,7 +34,7 @@ def run(infos, rides):
 
             found = False
             for score in scores:
-                if cars_indices[score[0]] == 0 and time + score[1] + score[2] <= rides[score[0]]['latest'] and time + score[1] + score[2] <= timemax:
+                if cars_indices[score[0]] == 0 and time + score[2] <= rides[score[0]]['latest'] and time + score[2] <= timemax:
                     results[i].append(score[0])
                     time = time + score[1] + score[2]
                     position = rides[score[0]]['finish']
