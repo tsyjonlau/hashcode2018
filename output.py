@@ -1,12 +1,10 @@
 
-def writeoutput(fileName, result):
+def writeoutput(fileName, results):
     file = open(fileName, 'w')
-    count = 1
-    for res in result:
-        file.write(str(count))
+    for vehicule, rides in results.items():
+        file.write(str(vehicule))
         file.write(" ")
-        for r in res:
-            file.write(str(r))
+        for ride in rides:
+            file.write(str(ride))
             file.write(str(" "))
         file.write("\n")
-        count = count + 1

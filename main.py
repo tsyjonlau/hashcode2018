@@ -1,19 +1,15 @@
 import sys
 import output
 import parser
+import simpleAssignRide
 
 # File name input
 fileName = sys.argv[1]
 
 infos, rides = parser.parse(fileName)
 
-result = [
-    [1,2],
-    [3]
-]
-
-print(result[0])
-# File name output 
+results = simpleAssignRide.simpleAssignRide(infos, rides)
+# File name output
 fileName = (fileName.split('.'))[0] + '.out'
 
-output.writeoutput(fileName, result)
+output.writeoutput(fileName, results)
