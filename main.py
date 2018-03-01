@@ -8,7 +8,7 @@ fileName = sys.argv[1]
 
 infos, rides = parser.parse(fileName)
 
-results = simpleAssignRide.simpleAssignRide(infos, rides)
+results = simpleAssignRide.assignRideV2(infos, rides)
 # File name output
 fileName = (fileName.split('.'))[0] + '.out'
 

@@ -1,5 +1,6 @@
 from distance import dist
 
+
 def parse(filename):
     file = open(filename, 'r')
     firstLine = file.readline()
