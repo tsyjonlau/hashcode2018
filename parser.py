@@ -1,5 +1,3 @@
-from distance import dist
-
 def parse(filename):
     file = open(filename, 'r')
     firstLine = file.readline()
@@ -24,7 +22,6 @@ def parse(filename):
         rides.append({
             'start': (int(line[0]), int(line[1])),
             'finish': (int(line[2]), int(line[3])),
-            'dist': dist((int(line[0]), int(line[1])), (int(line[2]), int(line[3]))),
             'earliest': int(line[4]),
             'latest': int(line[5]) 
         })
