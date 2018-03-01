@@ -18,6 +18,7 @@ def simpleAssignRide(infos, rides):
     return results
 
 def isAssignable(vehicule, ride):
+    dist = 0
     if vehicule['currentStep'] < ride['earliest']:
         dist = ride['earliest'] - vehicule['currentStep']
     ride_dist = distance.dist(ride['start'], ride['finish'])
