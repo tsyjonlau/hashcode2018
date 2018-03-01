@@ -17,7 +17,8 @@ def simpleAssignRide(infos, rides):
         rideIndex = rideIndex + 1
     return results
 
-def isAssignable(vehicule, ride):
+def isAssignable(vehicule, ride):]
+    dist = 0
     if vehicule['currentStep'] < ride['earliest']:
         dist = ride['earliest'] - vehicule['currentStep']
     ride_dist = distance.dist(ride['start'], ride['finish'])
@@ -49,4 +50,4 @@ def assignRideV2(infos, rides):
         rideIndex = rideIndex + 1
     return results
 
-def isProfitable(ride_dist, total_ride_dist):
+#def isProfitable(ride_dist, total_ride_dist):
