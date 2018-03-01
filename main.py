@@ -1,11 +1,11 @@
-
 import sys
 import output
+import parser
 
 # File name input
 fileName = sys.argv[1]
 
-
+infos, rides = parser.parse(fileName)
 
 result = [
     [1,2],
