@@ -25,7 +25,6 @@ def isAssignable(vehicule, ride):
     dist = ride_dist + to_ride_dist + vehicule['currentStep']
     if dist < ride['latest']:
         return dist
-    print('-1  //')
     return -1
 
 def assignRideV2(infos, rides):
@@ -42,7 +41,6 @@ def assignRideV2(infos, rides):
     for ride in rides:
         for key, vehicule in vehicules.items():
             dist = isAssignable(vehicule, ride)
-            print(dist) 
             if dist != -1:
                 vehicule['currentStep'] = dist
                 vehicule['currentPos'] = ride['finish']
