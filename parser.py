@@ -6,12 +6,12 @@ def parse(filename):
     infoList = firstLine.split('\n')
     infoList = infoList[0].split(' ')
     infos = {
-        'R': infoList[0],
-        'C': infoList[1],
-        'F': infoList[2],
-        'N': infoList[3],
-        'B': infoList[4],
-        'T': infoList[5] 
+        'R': int(infoList[0]),
+        'C': int(infoList[1]),
+        'F': int(infoList[2]),
+        'N': int(infoList[3]),
+        'B': int(infoList[4]),
+        'T': int(infoList[5]) 
     }
 
     rides = []
@@ -20,10 +20,10 @@ def parse(filename):
         line = line.split('\n')
         line = line[0].split(' ')
         rides.append({
-            'start': (line[0], line[1]),
-            'finish': (line[2], line[3]),
-            'earliest': line[4],
-            'latest': line[5] 
+            'start': (int(line[0]), int(line[1])),
+            'finish': (int(line[2]), int(line[3])),
+            'earliest': int(line[4]),
+            'latest': int(line[5]) 
         })
 
     return infos, rides
